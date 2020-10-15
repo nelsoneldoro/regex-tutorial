@@ -88,11 +88,53 @@ Notice that a better solution should avoid the usage of `.` in favor of a more s
 | `a(?<foo>bc)` | using ?<foo> we put a name to the group | |
   
 
-Example to convert markdown links in html anchors  
+Exercice: convert markdown links in html anchors  
 `\[(.*?)\]\((.*?)\)`
 
 ```
 [Google](https://www.google.com)
 [Google BR](https://www.google.com.br)
 ```
+
+### Advanced topics
+#### Back-references `\1`
+Exercice: look at boudle words `\b(\w+)\s\1\b`
+
+#### Look-ahead and Look-behind `(?=)` and `(?<=)`
+|         |            | Example |
+| --------|------------| --------|
+| `d(?=r)` | matches a d only if is followed by r, but r will not be part of the overall regex match | [Try it!](https://regex101.com/r/cO8lqs/18) |
+| `(?<=r)d` | matches a d only if is preceded by an r, but r will not be part of the overall regex match | [Try it!](https://regex101.com/r/cO8lqs/19) |
+| `d(?!r)` | matches a d only if is not followed by r, but r will not be part of the overall regex match | [Try it!](https://regex101.com/r/cO8lqs/20) |
+| `(?<!r)d` | matches a d only if is not preceded by an r, but r will not be part of the overall regex match | [Try it!](https://regex101.com/r/cO8lqs/21) |
+
+#### JS 
+- String `search()` `match()`
+- Regex`test()` `exec()`
+```
+var stg = "hello";
+var rgx = /hello/;
+
+var stg = new String("hello");
+var rgx = new RegExp("hello");
+
+// returns array of matches
+// PS: if you are not using flags the array must return the groups [$0, $1, ...]
+stg.match(rgx)
+
+//returns a boolean
+rgx.test(stg);
+
+//returns an iterrator of arrays with groups and them the matches like
+var results;
+while (results = rgx.exec(stg)) {
+ results[1]
+}
+
+
+```
+- `split()`
+- `replace()`
+
+
 
