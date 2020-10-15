@@ -31,11 +31,14 @@ A sequence of characters that define a search pattern.
 | --------|------------| --------|
 | `a(b\|c)` | matches a string that has a followed by b or c (and captures b or c) | |
 | `a[bc]`  | same as previous, but without capturing b or c | |
+*when `-` is not the first charecter inside `[]` it is used as a range like `[a-z]`*
+*when `^` is the first charecter inside `[]` it is used as a nagation `[^a-z]`*
+
 
 #### Character classes  `\d` `\w` `\s` and `.`
 |         |            | Example |
 | --------|------------| --------|
-| `\d` | matches a single character that is a digit -> Try it!
+| `\d` | matches a single character that is a digit
 | `\w` | matches a word character (alphanumeric character plus underscore) | |
 | `\s` | matches a whitespace character (includes tabs and line breaks) | |
 | `.`  | matches any character | |
@@ -53,3 +56,43 @@ A sequence of characters that define a search pattern.
 | `g` | global | |
 | `m` | multi-line | |
 | `i` | case-insensitive | |
+
+#### Boundaries `\b` and `\B`
+|         |            | Example |
+| --------|------------| --------|
+| `\babc\b` | performs a "whole words only" | [Try it!](https://regex101.com/r/cO8lqs/25) |
+| `\Babc\B` | negation | [Try it!](https://regex101.com/r/cO8lqs/26) |
+
+
+`colou?rs?` - all colours 
+`(\(\d{2}\)\s)?\d{5}[-.\s]\d{4}` - phone numbers
+
+
+
+
+### Intermediate topics
+#### Greedy and Lazy match
+The quantifiers `*`, `+` `{}` are greedy operators, so they expand the match as far as they can through the provided text.
+
+For example, `<.+>` matches `<div>simple div</div>`
+
+In order to catch only the div tag we can use a ? to make it lazy like `<.+>`
+
+Notice that a better solution should avoid the usage of `.` in favor of a more strict regex is `<[^<>]+>`
+
+#### Grouping and capturing `()`
+|         |            | Example |
+| --------|------------| --------|
+| `a(bc)` | parentheses create a capturing group with value bc | |
+| `a(?:bc)*` | using ?: we disable the capturing group | |
+| `a(?<foo>bc)` | using ?<foo> we put a name to the group | |
+  
+
+Example to convert markdown links in html anchors  
+`\[(.*?)\]\((.*?)\)`
+
+```
+[Google](https://www.google.com)
+[Google BR](https://www.google.com.br)
+```
+
