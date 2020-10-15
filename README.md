@@ -140,3 +140,9 @@ while (results = rgx.exec(stg)) {
 ```
 - `split()`
 - `replace()`
+
+
+### References
+https://www.youtube.com/watch?v=7DG3kCDx53c&list=PLRqwX-V7Uu6YEypLuls7iidwHMdCM6o2w
+
+https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
