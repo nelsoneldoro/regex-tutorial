@@ -64,7 +64,9 @@ A sequence of characters that define a search pattern.
 | `\Babc\B` | negation | [Try it!](https://regex101.com/r/cO8lqs/26) |
 
 
+Exercice: https://regex101.com/r/5HhYIR/1/
 `colou?rs?` - all colours 
+
 `(\(\d{2}\)\s)?\d{5}[-.\s]\d{4}` - phone numbers
 
 
@@ -135,7 +137,3 @@ while (results = rgx.exec(stg)) {
 ```
 - `split()`
 - `replace()`
-
-
-
-https://regex101.com/r/5HhYIR/1/
