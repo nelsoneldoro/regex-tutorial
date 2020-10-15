@@ -31,7 +31,9 @@ A sequence of characters that define a search pattern.
 | --------|------------| --------|
 | `a(b\|c)` | matches a string that has a followed by b or c (and captures b or c) | |
 | `a[bc]`  | same as previous, but without capturing b or c | |
+
 *when `-` is not the first charecter inside `[]` it is used as a range like `[a-z]`*
+
 *when `^` is the first charecter inside `[]` it is used as a nagation `[^a-z]`*
 
 
