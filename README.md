@@ -1,10 +1,10 @@
 # regex-tutorial
 
-### Definition
+#### Definition
 A sequence of characters that define a search pattern.
 
 
-### Basic topics
+## Basic topics
 
 ##### Anchors `^` and `$`
 |         |            | Example |
@@ -73,9 +73,7 @@ Exercice: https://regex101.com/r/5HhYIR/1/
 `(\(\d{2}\)\s)?\d{5}[-.\s]\d{4}` - phone numbers
 
 
-
-
-### Intermediate topics
+## Intermediate topics
 #### Greedy and Lazy match
 The quantifiers `*`, `+` `{}` are greedy operators, so they expand the match as far as they can through the provided text.
 
@@ -101,7 +99,7 @@ Exercice: convert markdown links in html anchors
 [Google BR](https://www.google.com.br)
 ```
 
-### Advanced topics
+## Advanced topics
 #### Back-references `\1`
 Exercice: look at boudle words `\b(\w+)\s\1\b`
 
@@ -144,5 +142,4 @@ while (results = rgx.exec(stg)) {
 
 ### References
 https://www.youtube.com/watch?v=7DG3kCDx53c&list=PLRqwX-V7Uu6YEypLuls7iidwHMdCM6o2w
-
 https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
