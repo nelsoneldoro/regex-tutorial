@@ -65,6 +65,7 @@ A sequence of characters that define a search pattern.
 
 
 Exercice: https://regex101.com/r/5HhYIR/1/
+
 `colou?rs?` - all colours 
 
 `(\(\d{2}\)\s)?\d{5}[-.\s]\d{4}` - phone numbers
