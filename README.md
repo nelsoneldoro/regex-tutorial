@@ -79,7 +79,7 @@ The quantifiers `*`, `+` `{}` are greedy operators, so they expand the match as 
 
 For example, `<.+>` matches `<div>simple div</div>`
 
-In order to catch only the div tag we can use a ? to make it lazy like `<.+>`
+In order to catch only the div tag we can use a ? to make it lazy like `<.+?>`
 
 Notice that a better solution should avoid the usage of `.` in favor of a more strict regex is `<[^<>]+>`
 
