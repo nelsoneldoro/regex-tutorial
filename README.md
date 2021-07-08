@@ -92,7 +92,8 @@ Notice that a better solution should avoid the usage of `.` in favor of a more s
   
 
 Exercice: convert markdown links in html anchors  
-`\[(.*?)\]\((.*?)\)`
+Find: `\[(.*?)\]\((.*?)\)`
+Replace: `<a href="$2">$1</a>`
 
 ```
 [Google](https://www.google.com)
