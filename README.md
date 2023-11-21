@@ -81,7 +81,7 @@ For example, `<.+>` matches `<div>simple div</div>`
 
 In order to catch only the div tag we can use a ? to make it lazy like `<.+?>`
 
-Notice that a better solution should avoid the usage of `.` in favor of a more strict regex is `<[^<>]+>`
+Notice that a better solution should avoid the usage of `.` in favour of a more strict regex is `<[^<>]+>`
 
 #### Grouping and capturing `()`
 |         |            | Example |
@@ -91,7 +91,7 @@ Notice that a better solution should avoid the usage of `.` in favor of a more s
 | `a(?<foo>bc)` | using ?<foo> we put a name to the group | |
   
 
-Exercice: convert markdown links in html anchors  
+Exercise: convert markdown links in html anchors  
 Find: `\[(.*?)\]\((.*?)\)`
 Replace: `<a href="$2">$1</a>`
 
@@ -102,7 +102,7 @@ Replace: `<a href="$2">$1</a>`
 
 ## Advanced topics
 #### Back-references `\1`
-Exercice: look at boudle words `\b(\w+)\s\1\b`
+Exercise: look at double words `\b(\w+)\s\1\b`
 
 #### Look-ahead and Look-behind `(?=)` and `(?<=)`
 |         |            | Example |
@@ -122,14 +122,14 @@ var rgx = /hello/;
 var stg = new String("hello");
 var rgx = new RegExp("hello");
 
-// returns array of matches
+// returns an array of matches
 // PS: if you are not using flags the array must return the groups [$0, $1, ...]
 stg.match(rgx)
 
 //returns a boolean
 rgx.test(stg);
 
-//returns an iterrator of arrays with groups and them the matches like
+//returns an iterator of arrays with groups and them the matches like
 var results;
 while (results = rgx.exec(stg)) {
  results[1]
