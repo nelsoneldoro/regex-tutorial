@@ -95,7 +95,7 @@ Exercise: convert markdown links in html anchors
 Find: `\[(.*?)\]\((.*?)\)`
 Replace: `<a href="$2">$1</a>`
 
-```
+```md
 [Google](https://www.google.com)
 [Google BR](https://www.google.com.br)
 ```
@@ -115,7 +115,7 @@ Exercise: look at double words `\b(\w+)\s\1\b`
 #### JS 
 - String `search()` `match()`
 - Regex`test()` `exec()`
-```
+```js
 var stg = "hello";
 var rgx = /hello/;
 
